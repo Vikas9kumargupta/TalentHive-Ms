@@ -1,9 +1,10 @@
 package com.example.jobms.job;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
-
 
 @Getter
 @Entity
@@ -13,9 +14,12 @@ public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty(message = "Title Can't be Empty")
     private String title;
     private String description;
+    @NotEmpty(message = "Salary Can't be Empty")
     private String minSalary;
+    @NotBlank(message = "Salary Can't be Empty")
     private String maxSalary;
     private String location;
     private Long companyId;
