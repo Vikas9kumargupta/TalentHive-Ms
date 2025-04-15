@@ -17,7 +17,10 @@ public class Company {
     private Long id;
     private String name;
     private String description;
+    private double rating;
 
+    public double getRating() {return rating;}
+    public void setRating(double rating) {this.rating = rating;}
     public Long getId() {
         return id;
     }
