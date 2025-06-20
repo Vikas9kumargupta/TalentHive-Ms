@@ -27,7 +27,7 @@
 | Distributed Tracing          | **Zipkin**                                                                 |
 | Messaging (optional)         | **RabbitMQ** (decoupled async events)                                      |
 | Persistence                  | **PostgreSQL** (one schema per service)                                    |
-| Containerization & CI/CD     | **Docker** images → **Kubernetes** manifests / Helm chart → GitHub Actions |
+| Containerization & CI/CD     | **Docker** images → **Kubernetes**
 
 ---
 
@@ -77,8 +77,6 @@ graph TD
   JobSvc -- Events --> Rabbit
   ReviewSvc -- Events --> Rabbit
 ```
-
-*Diagrams generated with [Mermaid](https://mermaid-js.github.io/) — update or replace with your own visuals if needed.*
 
 ---
 
